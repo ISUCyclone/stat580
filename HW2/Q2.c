@@ -1,17 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <math.h>
-
-int main(){
-	int i;
-	i = 1;
-	float x, y;
-	while(i<=1){
-		y = rand()/(float)RAND_MAX;
-		x = 10 * pow(y, (float) 1/3);
-		printf("%f\n", x);
-		i++;
-	}
+#include <time.h>
+int main()
+{
+	srand(time(0));
+	float x,y;
+	x = (float)rand()/RAND_MAX;
+	y = 10* pow(x,(float) 1/3);
+	printf("%f\n",y);
 	return 0;
 }
