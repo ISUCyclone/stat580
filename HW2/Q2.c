@@ -1,13 +1,21 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
 #include <time.h>
-int main()
-{
-	srand(time(0));
+#define MATHLIB_STANDALONE
+#include <Rmath.h>
+
+int main(){
+	int i,n;
+	n = 5;
+
 	float x,y;
-	x = (float)rand()/RAND_MAX;
-	y = 10* pow(x,(float) 1/3);
-	printf("%f\n",y);
+	
+	set_seed(time(NULL), 123456);
+	
+	for(i = 1; i <= n; i++)
+	{
+		x = unif_rand();
+		y = R_pow(10, x);
+		printf("%f\n", y);
+	}
 	return 0;
 }
