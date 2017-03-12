@@ -52,7 +52,7 @@ int main(int argc, char *argv[]){
 	dgesv_(&rowXt, &col, XX, &rowXt, ipiv, XY, &rowXt, &info);
 	/////////////////////////////////////////////////////////////////////////////
 	int i0, j0, rowXt0 = P, colX0 = P, colXt0 = N, col0 = 1, ipiv0[P], info0;
-	double alpha0 = 1, X10[N*P], Beta0 =0, XX0[P*P)], XY0[P];
+	double alpha0 = 1, X10[N*P], Beta0 =0, XX0[P*P], XY0[P];
 	for(i0=0; i0<N; i0++)
 	{
 		for(j0=0; j0<P; j0++)
