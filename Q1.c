@@ -76,7 +76,7 @@ int main(int argc, char *argv[]){
 		printf("\n");
 	}
 	else if(atoi(intercept) == 0){
-		for(i=1; i <(P+1); i++)
+		for(i=0; i <P; i++)
 			printf("%.6f ", XY0[i]);
 		printf("\n");
 	}
